@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="it">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffc400">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<title>Pubblica un annuncio | StudentBnB</title>
+<meta name="description" content="Pubblica un'offerta abitativa per studenti indicando in modo chiaro canone, spese, durata, deposito e servizi.">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="StudentBnB home">
+      <span class="brand-icon" aria-hidden="true"><span class="brand-cap">▰</span></span>
+      <span>Student<strong>BnB</strong><small>Trova la tua stanza. Vivi la tua città.</small></span>
+    </a>
+    <button class="menu-button" aria-label="Apri il menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Navigazione principale">
+      <a href="index.html#come-funziona">Come funziona</a>
+      <a href="index.html#chi-siamo">Chi siamo</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contatti">Contatti</a>
+      <a class="header-cta" href="pubblica.html">Pubblica annuncio gratis</a>
+      <a class="account-link" href="#" data-login>♙ <span data-account-label>Accedi</span></a>
+    </nav>
+  </div>
+</header>
+<main class="form-shell">
+  <div class="container">
+    <div class="form-heading">
+      <span class="kicker">Offerta chiara, contatti diretti</span>
+      <h1>Pubblica il tuo annuncio</h1>
+      <p>Compila i campi che permettono allo studente di capire e confrontare realmente l’offerta commerciale.</p>
+    </div>
+    <div class="progress" aria-label="Fasi del modulo">
+      <div class="progress-step active" data-step="1"><span>Alloggio</span></div>
+      <div class="progress-step active" data-step="2"><span>Costi</span></div>
+      <div class="progress-step active" data-step="3"><span>Condizioni</span></div>
+      <div class="progress-step active" data-step="4"><span>Contatti</span></div>
+    </div>
+
+    <form id="publish-form" class="publish-form">
+      <section class="form-section card">
+        <h2>1. Alloggio e posizione</h2>
+        <p>Indica subito che cosa viene affittato e dove si trova.</p>
+        <div class="form-grid three">
+          <div class="field"><label for="zone">Zona *</label><select id="zone" name="zone" required><option value="">Seleziona</option><option>Arcella</option><option>Portello</option><option>Sacra Famiglia</option><option>Ponte San Nicolò</option><option>Madonna Pellegrina</option><option>Centro</option><option>Forcellini</option><option>Guizza</option></select></div>
+          <div class="field"><label for="type">Tipologia *</label><select id="type" name="type" required><option value="">Seleziona</option><option>Stanza singola</option><option>Posto letto in doppia</option><option>Bilocale</option><option>Monolocale</option><option>Appartamento (3 camere)</option></select></div>
+          <div class="field"><label for="arrangement">Formula *</label><select id="arrangement" name="arrangement" required><option>In appartamento condiviso</option><option>Appartamento intero</option><option>Residence per studenti</option><option>Formula all inclusive</option></select></div>
+          <div class="field"><label for="surface">Superficie stanza (m²)</label><input id="surface" name="surface" type="number" min="5" max="100"></div>
+          <div class="field"><label for="apartmentSurface">Superficie alloggio (m²)</label><input id="apartmentSurface" name="apartmentSurface" type="number" min="10" max="500"></div>
+          <div class="field"><label for="roommates">Numero coinquilini</label><input id="roommates" name="roommates" type="number" min="0" max="20" value="2"></div>
+          <div class="field"><label for="floor">Piano</label><input id="floor" name="floor" placeholder="Es. 2° con ascensore"></div>
+          <div class="field"><label for="university">Università/facoltà vicina</label><input id="university" name="university" placeholder="Es. Ingegneria"></div>
+          <div class="field"><label for="universityMinutes">Distanza università (min)</label><input id="universityMinutes" name="universityMinutes" type="number" min="0" max="120"></div>
+          <div class="field"><label for="centerMinutes">Distanza centro (min)</label><input id="centerMinutes" name="centerMinutes" type="number" min="0" max="120"></div>
+          <div class="field"><label for="tag">Caratteristica sintetica</label><input id="tag" name="tag" placeholder="Es. vicina alla stazione"></div>
+          <div class="field"><label for="available">Disponibile da *</label><input id="available" name="available" required placeholder="Es. 1 settembre"></div>
+        </div>
+      </section>
+
+      <section class="form-section card">
+        <h2>2. Costi realmente sostenuti</h2>
+        <p>Il prezzo deve essere confrontabile: specifica cosa è incluso e cosa rimane fuori.</p>
+        <div class="form-grid three">
+          <div class="field"><label for="price">Canone mensile (€) *</label><input id="price" name="price" type="number" min="1" required></div>
+          <div class="field"><label for="expenses-included">Spese incluse? *</label><select id="expenses-included" name="expensesIncluded" required><option value="yes">Sì, incluse</option><option value="no">No, escluse</option></select></div>
+          <div class="field hidden" id="expense-amount-wrap"><label for="expenses">Stima spese mensili (€)</label><input id="expenses" name="expenses" type="number" min="0"></div>
+          <div class="field"><label for="deposit">Deposito cauzionale (€)</label><input id="deposit" name="deposit" type="number" min="0"></div>
+          <div class="field"><label for="publisher-type">Tipo inserzionista *</label><select id="publisher-type" name="publisherType" required><option>Privato</option><option>Agenzia</option><option>Residence/Gestore</option></select></div>
+          <div class="field hidden" id="agency-fee-wrap"><label for="agencyFee">Costo di agenzia *</label><input id="agencyFee" name="agencyFee" placeholder="Es. una mensilità + IVA"></div>
+        </div>
+        <span class="field-label">Quali costi sono compresi?</span>
+        <div class="checkbox-grid" style="margin-top:9px">
+          <label class="check-option"><input type="checkbox" name="bills" value="Spese condominiali"> Spese condominiali</label>
+          <label class="check-option"><input type="checkbox" name="bills" value="Riscaldamento"> Riscaldamento</label>
+          <label class="check-option"><input type="checkbox" name="bills" value="Acqua"> Acqua</label>
+          <label class="check-option"><input type="checkbox" name="bills" value="Elettricità"> Elettricità</label>
+          <label class="check-option"><input type="checkbox" name="bills" value="Gas"> Gas</label>
+          <label class="check-option"><input type="checkbox" name="bills" value="TARI"> TARI</label>
+          <label class="check-option"><input type="checkbox" name="bills" value="Internet Wi‑Fi"> Internet Wi‑Fi</label>
+          <label class="check-option"><input type="checkbox" name="bills" value="Pulizie periodiche"> Pulizie periodiche</label>
+          <label class="check-option"><input type="checkbox" name="bills" value="Manutenzione ordinaria"> Manutenzione ordinaria</label>
+        </div>
+      </section>
+
+      <section class="form-section card">
+        <h2>3. Contratto, uscita e servizi</h2>
+        <p>Durata minima e preavviso incidono sul rischio e sulla convenienza dell’offerta.</p>
+        <div class="form-grid three">
+          <div class="field"><label for="contract">Tipo di contratto *</label><input id="contract" name="contract" required placeholder="Es. transitorio studenti"></div>
+          <div class="field"><label for="minimumStay">Permanenza minima *</label><input id="minimumStay" name="minimumStay" required placeholder="Es. 6 mesi"></div>
+          <div class="field"><label for="notice">Preavviso per uscire *</label><input id="notice" name="notice" required placeholder="Es. 3 mesi"></div>
+          <div class="field"><label for="heating">Riscaldamento</label><select id="heating" name="heating"><option>Autonomo</option><option>Centralizzato</option><option>Pompa di calore</option><option>Non presente</option></select></div>
+          <div class="field"><label for="airConditioning">Aria condizionata</label><select id="airConditioning" name="airConditioning"><option>No</option><option>Sì</option><option>Solo in alcune stanze</option></select></div>
+          <div class="field"><label for="wifi">Wi‑Fi</label><select id="wifi" name="wifi"><option>Sì – Fibra</option><option>Sì</option><option>No</option></select></div>
+          <div class="field"><label for="pets">Animali</label><select id="pets" name="pets"><option>Non ammessi</option><option>Ammessi</option><option>Da concordare</option></select></div>
+          <div class="field"><label for="smokers">Fumatori</label><select id="smokers" name="smokers"><option>Non ammessi</option><option>Ammessi</option><option>Solo all'esterno</option></select></div>
+          <div class="field full"><label for="description">Descrizione completa *</label><textarea id="description" name="description" rows="6" required placeholder="Descrivi alloggio, arredi, composizione, zona e collegamenti."></textarea></div>
+          <div class="field"><label for="rules">Regole della casa (una per riga)</label><textarea id="rules" name="rules" rows="5" placeholder="Rispetto degli spazi comuni&#10;Niente feste"></textarea></div>
+          <div class="field"><label for="nearby">Servizi nelle vicinanze (uno per riga)</label><textarea id="nearby" name="nearby" rows="5" placeholder="Supermercato: 3 min&#10;Fermata bus: 2 min"></textarea></div>
+        </div>
+      </section>
+
+      <section class="form-section card">
+        <h2>4. Contatti</h2>
+        <p>I contatti sono mostrati direttamente allo studente. Nella demo non vengono inviati a un server.</p>
+        <div class="form-grid">
+          <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required></div>
+          <div class="field"><label for="phone">Telefono *</label><input id="phone" name="phone" required></div>
+          <div class="field"><label for="whatsapp">WhatsApp</label><input id="whatsapp" name="whatsapp" placeholder="Es. +39 340 1234567"></div>
+        </div>
+        <div class="notice"><strong>Nota sul prototipo:</strong> la pubblicazione salva l’annuncio nel browser e lo rende visibile nella pagina Padova sullo stesso dispositivo. Per una pubblicazione reale e condivisa da tutti serviranno database, verifica email e pannello di moderazione.</div>
+        <div class="form-actions">
+          <button class="btn btn-white" id="preview-button" type="button">Anteprima annuncio</button>
+          <button class="btn btn-yellow" type="submit">Salva e pubblica nella demo</button>
+        </div>
+        <div id="publish-preview" class="preview-box"></div>
+        <div id="publish-success" class="success-message" role="status"></div>
+      </section>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer" id="contatti">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="font-size:27px"><span>Student<strong>BnB</strong></span></a>
+        <p>La piattaforma dedicata alla mobilità abitativa degli studenti: costi, condizioni e servizi confrontabili con chiarezza.</p>
+      </div>
+      <div><h3>Esplora</h3><div class="footer-links"><a href="padova.html">Alloggi a Padova</a><a href="index.html#citta">Città universitarie</a><a href="pubblica.html">Pubblica annuncio</a></div></div>
+      <div><h3>Progetto</h3><div class="footer-links"><a href="index.html#come-funziona">Come funziona</a><a href="index.html#chi-siamo">Chi siamo</a><a href="index.html#faq">Domande frequenti</a></div></div>
+      <div><h3>Sicurezza</h3><div class="footer-links"><a href="privacy.html">Privacy e condizioni</a><a href="privacy.html#sicurezza">Prevenzione truffe</a><a href="mailto:segnalazioni@studentbnb.it">Segnala un annuncio</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 StudentBnB — Prototipo operativo</span><span>Padova, Italia</span></div>
+  </div>
+</footer>
+<div class="modal-backdrop" id="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
+  <div class="modal">
+    <button class="modal-close" data-close-modal aria-label="Chiudi">×</button>
+    <h2 id="login-title">Accedi alla demo</h2>
+    <p>Salva i preferiti e ritrova gli annunci pubblicati da questo dispositivo.</p>
+    <form id="login-form">
+      <div class="field"><label for="login-email">Email</label><input id="login-email" name="email" type="email" required placeholder="nome@email.it"></div>
+      <button class="btn btn-yellow btn-block" type="submit">Continua</button>
+    </form>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

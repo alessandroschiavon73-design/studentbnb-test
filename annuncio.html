@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="it">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffc400">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<title>Annuncio StudentBnB</title>
+<meta name="description" content="Scheda completa dell'offerta abitativa per studenti: canone, spese, deposito, durata, servizi e contatti.">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="StudentBnB home">
+      <span class="brand-icon" aria-hidden="true"><span class="brand-cap">▰</span></span>
+      <span>Student<strong>BnB</strong><small>Trova la tua stanza. Vivi la tua città.</small></span>
+    </a>
+    <button class="menu-button" aria-label="Apri il menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Navigazione principale">
+      <a href="index.html#come-funziona">Come funziona</a>
+      <a href="index.html#chi-siamo">Chi siamo</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contatti">Contatti</a>
+      <a class="header-cta" href="pubblica.html">Pubblica annuncio gratis</a>
+      <a class="account-link" href="#" data-login>♙ <span data-account-label>Accedi</span></a>
+    </nav>
+  </div>
+</header>
+<div class="breadcrumb"><div class="container"><a href="index.html">Home</a><span>›</span><a href="padova.html">Padova</a><span>›</span><strong>Annuncio</strong></div></div>
+<main class="detail-page">
+  <div class="container" id="detail-root"></div>
+</main>
+
+<footer class="site-footer" id="contatti">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="font-size:27px"><span>Student<strong>BnB</strong></span></a>
+        <p>La piattaforma dedicata alla mobilità abitativa degli studenti: costi, condizioni e servizi confrontabili con chiarezza.</p>
+      </div>
+      <div><h3>Esplora</h3><div class="footer-links"><a href="padova.html">Alloggi a Padova</a><a href="index.html#citta">Città universitarie</a><a href="pubblica.html">Pubblica annuncio</a></div></div>
+      <div><h3>Progetto</h3><div class="footer-links"><a href="index.html#come-funziona">Come funziona</a><a href="index.html#chi-siamo">Chi siamo</a><a href="index.html#faq">Domande frequenti</a></div></div>
+      <div><h3>Sicurezza</h3><div class="footer-links"><a href="privacy.html">Privacy e condizioni</a><a href="privacy.html#sicurezza">Prevenzione truffe</a><a href="mailto:segnalazioni@studentbnb.it">Segnala un annuncio</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 StudentBnB — Prototipo operativo</span><span>Padova, Italia</span></div>
+  </div>
+</footer>
+<div class="modal-backdrop" id="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
+  <div class="modal">
+    <button class="modal-close" data-close-modal aria-label="Chiudi">×</button>
+    <h2 id="login-title">Accedi alla demo</h2>
+    <p>Salva i preferiti e ritrova gli annunci pubblicati da questo dispositivo.</p>
+    <form id="login-form">
+      <div class="field"><label for="login-email">Email</label><input id="login-email" name="email" type="email" required placeholder="nome@email.it"></div>
+      <button class="btn btn-yellow btn-block" type="submit">Continua</button>
+    </form>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

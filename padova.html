@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="it">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffc400">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<title>Alloggi per studenti a Padova | StudentBnB</title>
+<meta name="description" content="Stanze, posti letto e appartamenti per studenti a Padova con costi, spese e condizioni confrontabili.">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="StudentBnB home">
+      <span class="brand-icon" aria-hidden="true"><span class="brand-cap">▰</span></span>
+      <span>Student<strong>BnB</strong><small>Trova la tua stanza. Vivi la tua città.</small></span>
+    </a>
+    <button class="menu-button" aria-label="Apri il menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Navigazione principale">
+      <a href="index.html#come-funziona">Come funziona</a>
+      <a href="index.html#chi-siamo">Chi siamo</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contatti">Contatti</a>
+      <a class="header-cta" href="pubblica.html">Pubblica annuncio gratis</a>
+      <a class="account-link" href="#" data-login>♙ <span data-account-label>Accedi</span></a>
+    </nav>
+  </div>
+</header>
+<div class="breadcrumb"><div class="container"><a href="index.html">Home</a><span>›</span><strong>Padova</strong></div></div>
+<main>
+  <section class="city-hero">
+    <div class="city-hero-bg" style="background-image:url('assets/img/padova-hero.webp')"></div>
+    <div class="container">
+      <h1>Padova</h1>
+      <h2>358 annunci disponibili</h2>
+      <p>Scopri stanze, posti letto e appartamenti nelle zone universitarie di Padova. Ogni offerta evidenzia costi, spese e condizioni contrattuali.</p>
+      <a class="btn btn-yellow" href="index.html">← Torna alla mappa</a>
+    </div>
+  </section>
+
+  <section class="filters" aria-label="Filtri degli annunci">
+    <div class="container filter-grid">
+      <label>Zona
+        <select id="filter-zone">
+          <option value="">Tutte le zone</option>
+          <option>Arcella</option><option>Portello</option><option>Sacra Famiglia</option>
+          <option>Ponte San Nicolò</option><option>Madonna Pellegrina</option>
+        </select>
+      </label>
+      <label>Tipologia
+        <select id="filter-type">
+          <option value="">Tutte le tipologie</option>
+          <option>Stanza singola</option><option>Posto letto in doppia</option>
+          <option>Bilocale</option><option>Appartamento (3 camere)</option>
+        </select>
+      </label>
+      <label>Prezzo massimo
+        <select id="filter-price">
+          <option value="">Qualsiasi</option><option value="350">€ 350</option>
+          <option value="450">€ 450</option><option value="700">€ 700</option><option value="1000">€ 1.000</option>
+        </select>
+      </label>
+      <label>Spese
+        <select id="filter-expenses">
+          <option value="">Tutte</option><option value="included">Incluse</option><option value="excluded">Escluse</option>
+        </select>
+      </label>
+      <label>Ordina per
+        <select id="filter-sort">
+          <option value="recent">Più recenti</option><option value="price-asc">Prezzo crescente</option>
+          <option value="price-desc">Prezzo decrescente</option><option value="zone">Zona</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="results-bar"><strong id="result-count">5 offerte trovate nella demo</strong><a href="pubblica.html" class="btn btn-yellow">+ Pubblica un annuncio</a></div>
+    <div id="listing-results" class="listings" aria-live="polite"></div>
+    <div class="pagination" aria-label="Paginazione"><button class="page-btn">‹</button><button class="page-btn active">1</button><button class="page-btn">2</button><button class="page-btn">3</button><span>…</span><button class="page-btn">18</button><button class="page-btn">›</button></div>
+    <div class="tip-strip"><span class="icon-circle">💡</span><div><strong>Suggerimento</strong><br><span>Salva le offerte preferite cliccando sul cuore.</span></div></div>
+  </section>
+</main>
+
+<footer class="site-footer" id="contatti">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="font-size:27px"><span>Student<strong>BnB</strong></span></a>
+        <p>La piattaforma dedicata alla mobilità abitativa degli studenti: costi, condizioni e servizi confrontabili con chiarezza.</p>
+      </div>
+      <div><h3>Esplora</h3><div class="footer-links"><a href="padova.html">Alloggi a Padova</a><a href="index.html#citta">Città universitarie</a><a href="pubblica.html">Pubblica annuncio</a></div></div>
+      <div><h3>Progetto</h3><div class="footer-links"><a href="index.html#come-funziona">Come funziona</a><a href="index.html#chi-siamo">Chi siamo</a><a href="index.html#faq">Domande frequenti</a></div></div>
+      <div><h3>Sicurezza</h3><div class="footer-links"><a href="privacy.html">Privacy e condizioni</a><a href="privacy.html#sicurezza">Prevenzione truffe</a><a href="mailto:segnalazioni@studentbnb.it">Segnala un annuncio</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 StudentBnB — Prototipo operativo</span><span>Padova, Italia</span></div>
+  </div>
+</footer>
+<div class="modal-backdrop" id="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
+  <div class="modal">
+    <button class="modal-close" data-close-modal aria-label="Chiudi">×</button>
+    <h2 id="login-title">Accedi alla demo</h2>
+    <p>Salva i preferiti e ritrova gli annunci pubblicati da questo dispositivo.</p>
+    <form id="login-form">
+      <div class="field"><label for="login-email">Email</label><input id="login-email" name="email" type="email" required placeholder="nome@email.it"></div>
+      <button class="btn btn-yellow btn-block" type="submit">Continua</button>
+    </form>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
