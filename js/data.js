@@ -1,0 +1,8 @@
+window.STUDENTBNB_LISTINGS=[
+{id:1,title:"Stanza singola luminosa",type:"Singola",zone:"Arcella",rent:550,condo:30,bills:0,billsIncluded:true,real:580,score:9.2,minutes:9,deposit:"2 mensilità",notice:"3 mesi",duration:"10 mesi",wifi:true,img:"assets/room-1.jpg"},
+{id:2,title:"Singola moderna al Portello",type:"Singola",zone:"Portello",rent:620,condo:35,bills:0,billsIncluded:true,real:655,score:9.4,minutes:7,deposit:"2 mensilità",notice:"2 mesi",duration:"6 mesi",wifi:true,img:"assets/room-2.jpg"},
+{id:3,title:"Singola conveniente in Centro",type:"Singola",zone:"Centro",rent:470,condo:25,bills:0,billsIncluded:true,real:495,score:8.7,minutes:10,deposit:"1 mensilità",notice:"3 mesi",duration:"10 mesi",wifi:true,img:"assets/room-3.jpg"},
+{id:4,title:"Posto letto in doppia",type:"Doppia",zone:"Forcellini",rent:350,condo:20,bills:0,billsIncluded:true,real:370,score:8.2,minutes:12,deposit:"1 mensilità",notice:"2 mesi",duration:"5 mesi",wifi:true,img:"assets/room-4.jpg"},
+{id:5,title:"Singola grande alla Guizza",type:"Singola",zone:"Guizza",rent:510,condo:35,bills:55,billsIncluded:false,real:600,score:8.9,minutes:16,deposit:"2 mensilità",notice:"3 mesi",duration:"10 mesi",wifi:true,img:"assets/room-1.jpg"},
+{id:6,title:"Bilocale per due studenti",type:"Appartamento",zone:"Centro",rent:790,condo:50,bills:90,billsIncluded:false,real:930,score:9.1,minutes:6,deposit:"3 mensilità",notice:"3 mesi",duration:"12 mesi",wifi:false,img:"assets/room-2.jpg"}
+];
