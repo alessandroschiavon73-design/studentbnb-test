@@ -1,8 +1,15 @@
 <!doctype html>
-<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pubblica annuncio — StudentBnB</title><link rel="stylesheet" href="css/style.css"></head><body>
-<header class="site-header compact"><a class="logo" href="index.html"><span class="logo-house">⌂</span><span><b>Student</b><strong>BnB</strong></span></a><nav><a href="index.html">Home</a></nav></header>
-<main class="page form-page"><span class="eyebrow">PUBBLICA GRATIS</span><h1>Rendi il tuo annuncio chiaro e confrontabile.</h1>
-<form class="publish-form" onsubmit="event.preventDefault();alert('Demo: annuncio acquisito.');">
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pubblica annuncio — Student B&B</title><link rel="stylesheet" href="css/style.css"><style>.channel-box{grid-column:1/-1;border:1px solid #ddd;border-radius:16px;padding:18px;background:#fff}.channel-box h2{margin:0 0 8px}.channel-box p{margin:0 0 14px;color:#666}.channel-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.channel-option{border:1px solid #ddd;border-radius:14px;padding:14px;cursor:pointer}.channel-option input{margin-right:8px}.channel-option strong{display:block;margin-top:8px}.channel-option small{display:block;color:#666;margin-top:5px;line-height:1.35}@media(max-width:700px){.channel-options{grid-template-columns:1fr}}</style></head><body>
+<header class="site-header compact"><a class="logo" href="index.html"><span class="logo-house">⌂</span><span><b>Student</b><strong>B&B</strong></span></a><nav><a href="index.html">Home</a></nav></header>
+<main class="page form-page"><span class="eyebrow">PUBBLICA GRATIS</span><h1>Pubblica una volta. Scegli dove far apparire l'annuncio.</h1>
+<form class="publish-form" onsubmit="event.preventDefault();alert('Demo: annuncio acquisito con canale di pubblicazione selezionato.');">
+<section class="channel-box">
+<h2>Formula di pubblicazione</h2><p>Puoi mantenere l'annuncio esclusivo su un solo portale oppure renderlo disponibile su entrambi.</p>
+<div class="channel-options">
+<label class="channel-option"><input required type="radio" name="publication_mode" value="studentbnb"><strong>Solo Student B&B</strong><small>Periodo di prova tra coinquilini / permanenza iniziale breve.</small></label>
+<label class="channel-option"><input required type="radio" name="publication_mode" value="casastudent"><strong>Solo Casa Student</strong><small>Ricerca e permanenza stabile medio-lunga.</small></label>
+<label class="channel-option"><input required type="radio" name="publication_mode" value="both"><strong>Entrambi</strong><small>Un unico annuncio pubblicato sui due portali, sincronizzato dallo stesso database.</small></label>
+</div></section>
 <label>Titolo<input required placeholder="Es. Stanza singola al Portello"></label>
 <label>Zona<input required placeholder="Portello"></label>
 <label>Canone mensile<input required type="number" placeholder="520"></label>
@@ -12,4 +19,4 @@
 <label class="wide">Descrizione<textarea rows="5" placeholder="Descrivi l'alloggio..."></textarea></label>
 <button class="black-btn wide">Invia annuncio demo</button>
 </form></main>
-<footer><div class="logo footer-logo"><span class="logo-house">⌂</span><span><b>Student</b><strong>BnB</strong></span></div><p>Alloggi per studenti, chiari e confrontabili.</p></footer></body></html>
+<footer><div class="logo footer-logo"><span class="logo-house">⌂</span><span><b>Student</b><strong>B&B</strong></span></div><p>Prova la convivenza. Se funziona, resta.</p></footer></body></html>
